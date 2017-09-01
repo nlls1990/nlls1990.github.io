@@ -1,0 +1,103 @@
+---
+title: showzeng's blog
+---
+
+<head>
+    <title>showzeng's blog</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="showzeng's blog" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="showzeng" />
+    <meta name="copyright" content="showzeng" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+         .cnzz {
+           display: none;
+         }
+    </style>
+
+    <link rel="shortcut icon" href="https://www.z4a.net/images/2017/08/31/shortcut_icon.png" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/content.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="header-bg" id="header-bg"></div>
+            <div class="nav-bar" id="nav-bar">
+                <div class="nav-bar-avatar" id="nav-bar-avatar" onmouseover="mouseOver()" onmouseout="mouseOut()">
+                    <img class="avatar" id="avatar" src="https://www.z4a.net/images/2017/08/31/avatar.jpg" alt="showzeng" />
+                </div>
+                <a href="/">
+                    <p class="nav-bar-title" id="nav-bar-title">写代码的小超超</p>
+                </a>
+                <div class="other">
+                    <a href="/articles" class="nav-bar-item">归档</a>
+                    <a href="/about" class="nav-bar-item">关于</a>
+                    <a href="/feed" class="nav-bar-item">RSS</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="content">
+
+            {% for post in paginator.posts %}
+
+            <div class="content-post">
+                <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
+                <div class="post-date">{{ post.date|date: "%Y-%m-%d" }}</div>
+                <a href="{{ post.url }}" class="post-excerpt">{{ post.excerpt }}</a>
+            </div>
+
+            {% endfor %}
+
+            <div class="content-post-bottom-paginator">
+                <div class="previous-page">
+                    {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path }}">
+                        <img class="page-img" src="https://www.z4a.net/images/2017/08/31/ic_navigate_before.png" />
+                    </a>
+                    {% else %}
+                    <span></span> {% endif %}
+                </div>
+
+                <div class="next-page">
+                    {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path }}">
+                        <img class="page-img" src="https://www.z4a.net/images/2017/08/31/ic_navigate_next.png" />
+                    </a>
+                    {% else %}
+                    <span></span> {% endif %}
+                </div>
+
+                <div class="page">
+                    {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
+                    <em class="page-num">{{ page }}</em> {% elsif page == 1 %}
+                    <a class="page-num" href="/">{{ page }}</a> {% else %}
+                    <a class="page-num" href="/blog/page{{ page }}">{{ page }}</a> {% endif %} {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+    <div class="cnzz">
+      <script type="text/javascript">
+          var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+          document.write(unescape("%3Cspan id='cnzz_stat_icon_1260800361'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260800361%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+    </div>
+</body>
+
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/background-animation.js"></script>
+<!-- <script type="text/javascript" src="/assets/js/click-animation.js"></script> -->
