@@ -1,13 +1,13 @@
 keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-paginate: 10
+paginate: 5
 paginate_path: "blog/page:num"
 
 
-name: showzeng
-description:  showzeng's blog
-url: http://showzeng.itscoder.com/
+name: Lucida
+description:  Lucida's blog
+url: http://mshuahua.com/
 
 defaults:
   -
