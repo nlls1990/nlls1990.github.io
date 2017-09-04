@@ -6,12 +6,12 @@ window.onscroll = function() {
         document.getElementById('nav-bar').className = 'nav-bar nav-bar-fixed'
         document.getElementById('nav-bar-avatar').className = 'nav-bar-avatar small'
         document.getElementById('nav-bar-title').className = 'nav-bar-title small'
-        document.getElementsByClassName('nav-bar-title')[0].innerHTML = 'showzeng'
+        document.getElementsByClassName('nav-bar-title')[0].innerHTML = 'Lucida'
     } else {
         document.getElementById('nav-bar').className = 'nav-bar'
         document.getElementById('nav-bar-avatar').className = 'nav-bar-avatar'
         document.getElementById('nav-bar-title').className = 'nav-bar-title'
-        document.getElementsByClassName('nav-bar-title')[0].innerHTML = '写代码的小超超'
+        document.getElementsByClassName('nav-bar-title')[0].innerHTML = 'Lucida'
     }
 }
 
@@ -40,7 +40,7 @@ var hiddenProperty = 'hidden' in document ? 'hidden' :
 var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
 var onVisibilityChange = function() {
     if (!document[hiddenProperty]) {
-        document.title = "ˇε ˇ showzeng's blog"
+        document.title = "ˇε ˇ Lucida's blog"
     } else {
         document.title = ":-( 不要离开我"
     }
