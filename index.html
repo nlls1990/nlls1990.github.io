@@ -1,6 +1,4 @@
----
-title: Lucida's blog
----
+--- title: Lucida's blog ---
 
 <head>
     <title>Lucida's blog</title>
@@ -13,9 +11,9 @@ title: Lucida's blog
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style type="text/css">
-         .cnzz {
-           display: none;
-         }
+        .cnzz {
+            display: none;
+        }
     </style>
 
     <link rel="shortcut icon" href="/assets/img/avator.jpg" type="image/x-icon" />
@@ -64,8 +62,7 @@ title: Lucida's blog
                     {% if paginator.previous_page %}
                     <a href="{{ paginator.previous_page_path }}">
                         <img class="page-img" src="https://www.z4a.net/images/2017/08/31/ic_navigate_before.png" />
-                    </a>
-                    {% else %}
+                    </a> {% else %}
                     <span></span> {% endif %}
                 </div>
 
@@ -73,8 +70,7 @@ title: Lucida's blog
                     {% if paginator.next_page %}
                     <a href="{{ paginator.next_page_path }}">
                         <img class="page-img" src="https://www.z4a.net/images/2017/08/31/ic_navigate_next.png" />
-                    </a>
-                    {% else %}
+                    </a> {% else %}
                     <span></span> {% endif %}
                 </div>
 
@@ -91,10 +87,10 @@ title: Lucida's blog
     {% include footer.html %}
 
     <div class="cnzz">
-      <script type="text/javascript">
-          var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-          document.write(unescape("%3Cspan id='cnzz_stat_icon_1260800361'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260800361%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
-      </script>
+        <script type="text/javascript">
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan id='cnzz_stat_icon_1260800361'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260800361%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+        </script>
     </div>
 </body>
 
