@@ -25,10 +25,8 @@ layout: about
 
 #### **联系方式**
 
-- **个人主页**: [www.showzeng.cn](http://www.showzeng.cn)
+- **个人主页**: [Home](http://nlls1990.github.io.cn)
 
-- **微博**: [showzeng](http://weibo.com/showzeng)
+- **Github**: [nlls1990](https://www.github.com/nlls1990)
 
-- **Github**: [showzeng](https://www.github.com/showzeng)
-
-- **邮箱**: [kingstageshow@gamil.com](mailto:kingstageshow@gmail.com)
+- **邮箱**: [lishuo1607@163.com](mailto:lishuo1607@163.com)
