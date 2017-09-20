@@ -37,15 +37,22 @@ img {
 
 #container {
   position: relative;
+  /* 相对位置 */
   width: 100%;
+  /* 宽度占满 */
   background-color: #fff;
+  /* 背景颜色 */
   -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+                    /*x轴 y轴  模糊度   颜色值      */
   box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+  /* 为匹配非Chrome浏览器的适配*/
 }
 
 @media screen and (max-device-width: 768px) {
   body {
     padding: 0;
+    /* 小屏幕时 , 没有内部边距*/
     width: 100%;
+    /* 宽度 占满*/
   }
 }
