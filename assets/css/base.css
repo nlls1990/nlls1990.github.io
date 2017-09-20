@@ -21,8 +21,11 @@ body {
 
 a {
   text-decoration: none;
+  /* 对于链接的文本不做任何处理 */
   color: #fff;
+  /* 链接的颜色为0XFFF*/ 
   font-size: 1em;
+  /* 设置字体大小为1em */
 }
 
 img {
