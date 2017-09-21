@@ -73,8 +73,7 @@
 
 .nav-bar.nav-bar-fixed {
   position: fixed;
-  width: 80%;
-  left: 10%;
+  width: 100%;
   top: 0;
   background-color: rgba(66, 66, 66, 0.9);
   -webkit-box-shadow: 4px 5px 6px rgba(0,0,0,0.3);
