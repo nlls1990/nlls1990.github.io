@@ -11,9 +11,9 @@ body {
   /* 高度根据内容来定, 所以设置为auto*/
   min-height: 100%;
   /* 设置最小高度为占满显示的一屏 */
-  padding: 0 10%;
+  padding: 0;
   /* 内边距 上下为0 , 左右为10%*/
-  width: 80%;
+  width: 60%;
   /* 宽度为 百分比80% */
   background-color: rgb(223,223,223);
   /* 背景颜色 */
