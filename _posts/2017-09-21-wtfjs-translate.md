@@ -8,13 +8,11 @@ excerpt: JavaScript 有趣和棘手（坑爹？）的示例
 
 [原文链接](https://github.com/denysdovhan/wtfjs)
 
-##动机
+## 动机
 
----
 >Just for Fun
 -- "Just for Fun: The Story of an Accidental Revolutionary", Linus Torvalds
 
----
 本文所罗列出来的内容的最终目的是整理和收集那些疯狂的例子, 同时对它们进行解释和说明它们是怎么运行的. 仅仅是出于对学习那些我们以前所不知道的东西的乐趣.
 
 如果你是一个小白, 你可以用这些笔记去深入学习JavaScript. 我希望这些例子可以激发你去投入更多的时间去了解这些特性.
@@ -23,11 +21,9 @@ excerpt: JavaScript 有趣和棘手（坑爹？）的示例
 
 不管怎样, 去读读它吧. 你很有可能会发现某些新东西呢.
 
----
 
-##标记
+## 标记
 
----
 `// ->`用于显示表达式的结果. 例如:
 ```javascript
 1 + 1 // -> 2
@@ -41,13 +37,13 @@ console.log('hello, world!') // > hello, world!
 // 定义一个foo常量函数
 const foo = function () {}
 ```
----
 
-##示例
 
----
+## 示例
 
-###`[]`等于`![]`
+
+
+### `[]`等于`![]`
 
 数组等于非数组:
 ```javascript
@@ -57,9 +53,9 @@ const foo = function () {}
 > * [12.5.9 Logical NOT Operator (!)](https://www.ecma-international.org/ecma-262/#sec-logical-not-operator)
 > * [7.2.13 Abstract Equality Comparison](https://www.ecma-international.org/ecma-262/#sec-abstract-equality-comparison)
 
----
 
-###true 等于 false
+
+### true 等于 false
 
 ```javascript
 !!'false' == !!'true' // -> true
@@ -78,5 +74,5 @@ false == 'false' // -> false
 ```
 > * [7.2.13 Abstract Equality Comparison](https://www.ecma-international.org/ecma-262/#sec-abstract-equality-comparison)
 
----
+
 
