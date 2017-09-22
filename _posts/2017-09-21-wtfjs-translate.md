@@ -6,7 +6,7 @@ category: 翻译
 excerpt: JavaScript 有趣和棘手（坑爹？）的示例
 ---
 
-[原文链接](https://github.com/denysdovhan/wtfjs)
+
 
 ## 动机
 
@@ -76,3 +76,4 @@ false == 'false' // -> false
 
 
 
+[原文链接](https://github.com/denysdovhan/wtfjs)
