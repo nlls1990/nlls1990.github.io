@@ -9,6 +9,7 @@ excerpt: JavaScript 有趣和棘手（坑爹？）的示例
 [原文链接](https://github.com/denysdovhan/wtfjs)
 
 ##动机
+
 ---
 >Just for Fun
 -- "Just for Fun: The Story of an Accidental Revolutionary", Linus Torvalds
@@ -23,7 +24,9 @@ excerpt: JavaScript 有趣和棘手（坑爹？）的示例
 不管怎样, 去读读它吧. 你很有可能会发现某些新东西呢.
 
 ---
+
 ##标记
+
 ---
 `// ->`用于显示表达式的结果. 例如:
 ```javascript
@@ -39,8 +42,11 @@ console.log('hello, world!') // > hello, world!
 const foo = function () {}
 ```
 ---
+
 ##示例
+
 ---
+
 ###`[]`等于`![]`
 
 数组等于非数组:
@@ -52,6 +58,7 @@ const foo = function () {}
 > * [7.2.13 Abstract Equality Comparison](https://www.ecma-international.org/ecma-262/#sec-abstract-equality-comparison)
 
 ---
+
 ###true 等于 false
 
 ```javascript
