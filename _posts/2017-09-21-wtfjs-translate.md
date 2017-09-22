@@ -74,6 +74,38 @@ false == 'false' // -> false
 ```
 > * [7.2.13 Abstract Equality Comparison](https://www.ecma-international.org/ecma-262/#sec-abstract-equality-comparison)
 
+### baNaNa
 
+```javascript
+'b' + 'a' + + 'a' + 'a'
+```
 
+这句代码是学校里的很古老的一个JavaScript的笑话, 但是值得重新提起. 如下是最原始的例子:
+```javascript
+'foo' + + 'bar' // -> 'fooNaN'
+```
+**解释**
+这个表达式可以等效为 `'foo' + (+'bar')`, `'bar'`转化的结果并不是一个数字
+
+> * [12.8.3 The Addition Operator (+)](https://www.ecma-international.org/ecma-262/#sec-addition-operator-plus)
+> * [12.5.6 Unary + Operator](https://www.ecma-international.org/ecma-262/#sec-unary-plus-operator)
+
+### `NaN` is not a `NaN`
+
+```javascript
+NaN === NaN // ->false
+```
+**解释**
+规范中严格说明了这个行为背后的逻辑
+
+>1. 如果 Type(x)和 Type(y)不同, 那么返回false.
+>2. 如果 Type(x) 是一个数字类型, 那么,
+>  i. 如果 x 是 NaN, 那么返回false.
+>  ii. 如果 y 是 NaN, 那么返回false.
+>  iii. ...
+>
+>  [7.2.14 Strict Equality Comparison](https://www.ecma-international.org/ecma-262/#sec-strict-equality-comparison)
+如下是来自IEEE对于NaN的解释:
+>Four mutually exclusive relations are possible: less than, equal, greater than, and unordered. The last case arises when at least one operand is NaN. Every NaN shall compare unordered with everything, including itself.
+> -- "[What is the rationale for all comparisons returning false for IEEE754 NaN values?](https://stackoverflow.com/questions/1565164/what-is-the-rationale-for-all-comparisons-returning-false-for-ieee754-nan-values#1573715)" at StackOverflow
 [原文链接](https://github.com/denysdovhan/wtfjs)
