@@ -108,4 +108,36 @@ NaN === NaN // ->false
 如下是来自IEEE对于NaN的解释:
 >Four mutually exclusive relations are possible: less than, equal, greater than, and unordered. The last case arises when at least one operand is NaN. Every NaN shall compare unordered with everything, including itself.
 > -- "[What is the rationale for all comparisons returning false for IEEE754 NaN values?](https://stackoverflow.com/questions/1565164/what-is-the-rationale-for-all-comparisons-returning-false-for-ieee754-nan-values#1573715)" at StackOverflow
+> 
+
+### It's a fail
+你可能不会相信, 但是...
+
+```javascript
+(![]+[])[+[]]+(![]+[])[+!+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]
+// -> 'fail'
+```
+
+**解释**
+通过切割大块的符号为片段, 我们可以看到如下模式会生成如下:
+
+```javascript
+(![]+[]) // -> 'false'
+![]      // -> false
+```
+
+因此我们尝试添加中括号[]为false. 然而因为大量的内部函数调用(binary + Operator -> ToPrimitive -> [[DefaultValue]]), 我们以转化后的右端操作符为字符串:
+
+```javascript
+(![]+[].toString()) // 'false'
+```
+
+思考一下, 一个字符串作为一个数组, 我们通过加入索引来访问第一个字母:
+
+```javascript
+'false'[0] // -> 'f'
+```
+剩余的字符就很明显了,当超过字符的总数时, 索引i返回的就是'falseundefined', 例如我们去访问index['10'].
+
+
 [原文链接](https://github.com/denysdovhan/wtfjs)
