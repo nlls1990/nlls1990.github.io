@@ -1,19 +1,22 @@
-<!-- footer Start -->
-<footer>
+<footer class="site-footer">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="footer-manu">
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <!-- <li><a href="{{ site.baseurl }}/contact">Contact us</a></li>
-            <li><a href="#">How it works</a></li>
-            <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-            <li><a href="#">Terms</a></li> -->
-          </ul>
-        </div>
-        <p>Powerd by <a href="https://github.com/luminousrubyist/airspace-jekyll">airspace-jekyll</a></p>
-      </div>
+    <div class="footer left column one-half">
+      <section class="small-font">
+        Theme <a href="https://github.com/wild-flame/jekyll-simple"> Simple </a> by <a href="http://wildflame.me">wildflame</a>
+        © 2016 
+        Powered by <a href="https://github.com/jekyll/jekyll">jekyll</a>
+      </section>
+    </div>
+
+    <div class="footer right column one-half">
+      <section class="small-font">
+        {% if site.github_username %}
+        {% include icon-github.html username=site.github_username %}
+        {% endif %}
+        {% if site.twitter_username %}
+        {% include icon-twitter.html username=site.twitter_username %}
+        {% endif %}
+      </section>
     </div>
   </div>
 </footer>
