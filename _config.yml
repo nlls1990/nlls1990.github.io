@@ -9,7 +9,7 @@
 title: Hello World
 email: 124639013@qq.com
 description: > # this means to ignore newlines until "baseurl:"
-  这里是一片纯洁的自留地，学会关注自己，当你在生活中做了一些觉得了不起的事情，记录下来，可以让我知道每天自己做了什么，有哪些进步；也可以让你在失落困苦的时候，找到坚持下去的力量，立下此Flag，逼迫自己进步，当你前后左右都没有退路的时候，一定是命运在鼓励你向上飞了.
+  学会关注自己，当你在生活中做了一些觉得了不起的事情，记录下来，可以让我知道每天自己做了什么，有哪些进步；也可以让你在失落困苦的时候，找到坚持下去的力量，立下此Flag，逼迫自己进步，当你前后左右都没有退路的时候，一定是命运在鼓励你向上飞了.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 github_username:  nlls1990
