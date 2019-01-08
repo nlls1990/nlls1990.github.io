@@ -1,52 +1,31 @@
 ---
 layout: post
-title:  MAXHUB adb安装Mark工具
-category: MAXHUB 
-description: 全局批注小的二维码和大的二维码显示内容不一致.
+title:  修改Windows网卡的MAC地址的方法
+category: Windows 
+description: 因为主板厂商漏烧MAC引出的一系列联想.
 ---
 
-## 背景介绍
-广州海珠区某客户，在直播过程中使用二代机MAXHUB产品，在使用过程中使用全局批注进行截图备份， 但是通过批注生成的二维码，小的二维码和大的二维码扫出来的内容不是同一个。
+### 背景介绍
+海外客户在开箱一个PC模块后，插入网线总是无法联网，进入cmd命令行后，发现MAC地址为空。
+![MAC地址为0](https://api.superbed.cn/pic/5c3462209dc6d651dda7daa6)
 
-## MAXHUB adb推送全局批注软件
-[apk下载链接](https://drive.cvte.com/p/DVaUf4wQxA8Ym7ID)
-**Step 1** 进入设置-关于，点击用户协议，狂点MAXHUB的图标，打开ADB
-![d75a82591f673d895cb0859ec703a9ab.png](evernotecid://721934AE-46B8-4DCD-A3C6-A872FC7608A1/appyinxiangcom/9795879/ENResource/p2043)
 
-**Step 2** 使用终端adb连接设备
-```
-adb connect MAXHUB_IP
-```
 
-**Step 3** 切换adb为root身份
-```
-adb root
-```
+### 解决方法
+设备在海外，而且事情紧急，只能通过软件去烧写MAC的方法。通过搜索引擎查询， Windows系统是可以手动修改MAC地址的。操作步骤如下：
+![手动烧写MAC地址的方法](https://api.superbed.cn/pic/5c3462859dc6d6521665fb65)
 
-**Step 4** 重新remount挂载磁盘，这样就可读写了
-```
-adb remount
-```
 
-**Step 5** 进入shell，删除MaxhubMark
-```
-adb shell
-cd /system/app
-rm -rf MaxhubMark
-```
+### 操作方法
+计算机右键-管理-设备管理-网络适配器-Realtek XXXX-属性-高级-属性-网络地址-将不存在改为值，填上MAC保存即可。
 
-**Step 6** 重启安卓
-```
-reboot
-```
+### 思考 修改MAC地址的用途？
 
-**Step 7** 重新adb连接后，安装apk,提示Success后就可以了
-```
-adb connect MAXHUB_IP
-adb install ~/Desktop/MaxhubMark_master_maxhub_hisi510_release_R.0.1.58
+1. 一般的对于一些单位或者是学校来说，他们的局域网里都有这样的一个情况，那就是通过代理上Internet的时候，大多数的情况下是利用MAC-IP绑定方式来进行验证的。通过修改MAC-IP来获得一些上网的权限。
 
-/Users/lucida/Desktop/MaxhubMark_master_maxhub_hi...file pushed. 0.4 MB/s (11269925 bytes in 28.210s)
-	pkg: /data/local/tmp/MaxhubMark_master_maxhub_hisi510_release_R.0.1.58.apk
-Success
-```
-**Step 8** 最后验证一下，全局批注的大二维码和小二维码是不是一致的，就可以了
+2. 通过修改MAC地址，我们就可以实现IP欺骗目的，利用这样的手段可以截获一些数据包来进行操作。
+
+3. 有的时候我们买了不正规厂家所生产的网卡，使用的时候发现两块地址一模一样，因此需要更改其中之一，当然这样的事情很少发生。
+
+参考：
+[修改mac地址有什么用？](https://product.pconline.com.cn/itbk/software/dnyw/1707/9669898.html)
