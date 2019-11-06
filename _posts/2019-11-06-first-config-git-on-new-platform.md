@@ -2,7 +2,6 @@
 layout: post
 title: 第一次配置git环境的操作步骤
 category: 工具
-tag: git
 description: 在一台新的电脑或新的服务器上配置git环境的操作步骤
 ---
 
